@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MigrationSource.Views.BroadcastMessagePage">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="Center" 
+                     HorizontalOptions="Center">
+            <Button x:Name="Button1" 
+                    Text="Click here!" WidthRequest="150" 
+                    HeightRequest="40" Command="{Binding ActionCommand}"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

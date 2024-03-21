@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:renderers="clr-namespace:MigrationSource.Renderers"
+             x:Class="MigrationSource.Views.MainPage">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+            <Label Margin="10,0,0,0" FontFamily="{StaticResource RegularFont}">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span x:Name="LinkText" FontSize="18" 
+                              Text="This is formatted text "/>
+                        <Span x:Name="LinkSpan" 
+                              Text="and it supports gestures"
+                              FontSize="18"
+                              TextDecorations="Underline">
+                            <Span.GestureRecognizers>
+                                <TapGestureRecognizer 
+                                    x:Name="LinkGesture" 
+                                    Tapped="LinkGesture_Tapped" />
+                            </Span.GestureRecognizers>
+                        </Span>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <StackLayout Orientation="Horizontal">
+                <Button x:Name="BatteryStatusButton" 
+                        Text="Check battery status" 
+                        Clicked="BatteryStatusButton_Clicked"/>
+                <Label x:Name="BatteryStatusLabel" 
+                       Margin="10,0,0,0" />
+            </StackLayout>
+            <StackLayout>
+                <renderers:AutoSelectEntry x:Name="Entry1" 
+                   Text="Pre-populated Entry for auto-select"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
